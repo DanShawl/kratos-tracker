@@ -1,0 +1,17 @@
+.workoutCard {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.workoutName {
+  border: none;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 1em 0;
+  /* margin-left: 1em; */
+}
+
+.createExercise {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+}

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Workout from './Components/Workout';
+//  Home Component
+
+//  Workout Component
+//    1.  Input for name of workout
+//    2.  List of exercises
+//    3.  Button for modal to add exercises
+
+//  Modal Component
+//    1.  Input for exercise name, notes, type
+//    2.  Button to add to list
+
+//  Exercise Component
+//    1.  Take props from modal to create it
+//    2.  edit, delete
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Workout />
     </div>
   );
 }
