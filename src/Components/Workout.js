@@ -25,11 +25,7 @@ const Workout = () => {
         />
       )}
       <div className="workoutCard">
-        <input
-          className="workoutName"
-          type="text"
-          placeholder="untitled workout"
-        />
+        <input className="workoutName" type="text" placeholder="untitled" />
         <button
           className="createExercise"
           onClick={() => {
