@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ExerciseItem from '../ExerciseItem';
 import Modal from './Modal';
 import './Workout.css';
+import { BiPlus } from 'react-icons/bi';
+
 const Workout = () => {
   const [openModal, setOpenModal] = useState(false);
   const [exerciseName, setExerciseName] = useState('');
@@ -11,8 +13,15 @@ const Workout = () => {
 
   return (
     <div>
+      <BiPlus
+        className="createExercise"
+        onClick={() => {
+          setOpenModal(true);
+        }}
+      />
       {openModal && (
         <Modal
+          className="modal"
           closeModal={setOpenModal}
           setExerciseName={setExerciseName}
           exerciseName={exerciseName}
@@ -25,15 +34,28 @@ const Workout = () => {
         />
       )}
       <div className="workoutCard">
-        <input className="workoutName" type="text" placeholder="untitled" />
-        <button
+        <input
+          className="workoutName"
+          id="workoutName"
+          type="text"
+          placeholder="untitled"
+        />
+
+        {/* <BiPlus
+          className="createExercise"
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        /> */}
+        {/* <button
           className="createExercise"
           onClick={() => {
             setOpenModal(true);
           }}
         >
-          Add Exercise
-        </button>
+        
+          <BiPlus />
+        </button> */}
         {/* {console.log(exercises)} */}
         <ExerciseItem
           exercises={exercises}

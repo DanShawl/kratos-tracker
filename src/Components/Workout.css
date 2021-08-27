@@ -9,9 +9,19 @@
   margin: 1em 0;
   /* margin-left: 1em; */
 }
-
+/* <i class="fas fa-plus"></i> */
 .createExercise {
   position: fixed;
-  bottom: 0.5em;
-  right: 0.5em;
+  bottom: 0.75em;
+  right: 0.75em;
+  /* border: none; */
+  font-size: 2rem;
+  padding: 0.15em;
+  border-radius: 50%;
+  /* background: rgb(228, 228, 228); */
+  background: #4c8bf5;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 5px 5px 10px rgba(141, 141, 141, 0.514);
 }

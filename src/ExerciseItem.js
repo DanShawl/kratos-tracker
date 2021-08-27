@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Components/ExerciseItem.css';
+import { BiMenu } from 'react-icons/bi';
 
 const ExerciseItem = ({ exercises }) => {
   return (
@@ -7,8 +9,12 @@ const ExerciseItem = ({ exercises }) => {
         {exercises.map((exercise) => {
           return (
             <li className="exerciseItem">
-              <h4>{exercise.exerciseName}</h4>
-              {exercise.exerciseNote} <br /> {exercise.exerciseType}
+              <div className="exerciseItemInfo">
+                <BiMenu />
+                <h3>{exercise.exerciseName}</h3>
+                <p>{exercise.exerciseNote}</p>
+              </div>
+              <p className="exerciseItemType">{exercise.exerciseType}</p>
             </li>
           );
         })}

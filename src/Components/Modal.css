@@ -1,4 +1,5 @@
 .modalBackground {
+  z-index: 99;
   width: 100vw;
   height: 100vh;
   background-color: rgba(100, 100, 100, 0.5);
@@ -6,6 +7,7 @@
 }
 
 .modalContainer {
+  /* z-index: 99; */
   width: 100%;
   border-radius: 5px 5px 0 0;
   background-color: #fff;
@@ -18,7 +20,6 @@
 }
 .modalInput {
   margin: 0 auto;
-
   width: 90%;
   border: none;
 }
@@ -30,8 +31,10 @@
   font-size: 12px;
 }
 .modalBtnContainer {
+  /* text-align: right; */
   display: flex;
-  justify-content: right;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
   margin-right: 1em;
 }
 .modalBtn {
@@ -40,4 +43,16 @@
   border: none;
   cursor: pointer;
   justify-self: end;
+  text-align: right;
+}
+.addModalBtn {
+  background: #4c8bf5;
+  padding: 0.6em 1.2em;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.closeModalBtn {
+  color: rgb(121, 112, 112);
 }

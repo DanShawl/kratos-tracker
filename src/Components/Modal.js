@@ -11,6 +11,7 @@ const Modal = ({
   setExercises,
   exercises,
 }) => {
+  // document.getElementById('nameInput').focus();
   const addExercise = (e) => {
     e.preventDefault();
     // setExercises([...exercises, exerciseName]);
@@ -33,13 +34,15 @@ const Modal = ({
     setExerciseNote('');
     setExerciseType('');
   };
+
   return (
     <div className="modalBackground">
-      <div className="modalContainer">
+      <form className="modalContainer">
         {/* <h1>Add a new exercise</h1> */}
         <input
           type="text"
           className="modalInput nameInput"
+          id="nameInput"
           placeholder="New exercise"
           value={exerciseName}
           onChange={(e) => {
@@ -65,19 +68,20 @@ const Modal = ({
           }}
         />
         <div className="modalBtnContainer">
-          <button className="modalBtn closeModalBtn" onClick={cancelExercise}>
-            Cancel
-          </button>
           <button
+            type="submit"
             className="modalBtn addModalBtn"
             // onClick={() => closeModal(false)}
             onClick={addExercise}
           >
             Add
           </button>
+          <button className="modalBtn closeModalBtn" onClick={cancelExercise}>
+            Cancel
+          </button>
         </div>
         {/* change button and placeholders depending on instance */}
-      </div>
+      </form>
     </div>
   );
 };
