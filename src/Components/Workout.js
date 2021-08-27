@@ -35,10 +35,10 @@ const Workout = () => {
       )}
       <div className="workoutCard">
         <input
-          className="workoutName"
+          className="workoutName font-link"
           id="workoutName"
           type="text"
-          placeholder="untitled"
+          placeholder="Add a title"
         />
 
         {/* <BiPlus

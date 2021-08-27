@@ -4,9 +4,23 @@
   align-items: center;
   margin-bottom: 1.5em;
 }
-
+.exerciseItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.exerciseItemRight {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
 .exerciseItemType {
   font-weight: 500;
   background: rgb(216, 216, 216);
   padding: 0.2em 0.5em;
+}
+
+.dragBtn {
+  height: 16px;
+  width: 16px;
 }

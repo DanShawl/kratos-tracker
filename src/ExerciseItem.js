@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Components/ExerciseItem.css';
-import { BiMenu } from 'react-icons/bi';
+import { BiMenu, BiEdit, BiTrashAlt } from 'react-icons/bi';
 
 const ExerciseItem = ({ exercises }) => {
   return (
@@ -9,12 +9,20 @@ const ExerciseItem = ({ exercises }) => {
         {exercises.map((exercise) => {
           return (
             <li className="exerciseItem">
-              <div className="exerciseItemInfo">
-                <BiMenu />
-                <h3>{exercise.exerciseName}</h3>
-                <p>{exercise.exerciseNote}</p>
+              <div className="exerciseItemLeft">
+                <BiMenu className="dragBtn" />
+                <div className="exerciseItemInfo">
+                  <h3>{exercise.exerciseName}</h3>
+                  <p>{exercise.exerciseNote}</p>
+                </div>
               </div>
-              <p className="exerciseItemType">{exercise.exerciseType}</p>
+              <div className="exerciseItemRight">
+                <div className="exerciseItemBtns">
+                  <BiEdit />
+                  <BiTrashAlt />
+                </div>
+                <p className="exerciseItemType">{exercise.exerciseType}</p>
+              </div>
             </li>
           );
         })}

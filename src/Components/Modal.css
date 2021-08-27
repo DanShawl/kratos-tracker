@@ -28,6 +28,7 @@
 }
 .noteInput,
 .typeInput {
+  color: rgb(107, 106, 106);
   font-size: 12px;
 }
 .modalBtnContainer {

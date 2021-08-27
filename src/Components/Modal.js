@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Modal.css';
 const Modal = ({
   closeModal,
@@ -35,13 +35,20 @@ const Modal = ({
     setExerciseType('');
   };
 
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <div className="modalBackground">
       <form className="modalContainer">
         {/* <h1>Add a new exercise</h1> */}
         <input
+          ref={inputRef}
           type="text"
-          className="modalInput nameInput"
+          className="modalInput nameInput font-link"
           id="nameInput"
           placeholder="New exercise"
           value={exerciseName}

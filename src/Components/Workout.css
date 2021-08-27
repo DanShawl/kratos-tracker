@@ -3,9 +3,10 @@
   margin-right: 1em;
 }
 .workoutName {
+  color: rgb(39, 39, 39);
   border: none;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 1em 0;
   /* margin-left: 1em; */
 }
